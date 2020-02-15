@@ -1,4 +1,4 @@
-let seconds = 5;
+let seconds = 1500;
 const countdown = document.querySelector('#countdown')
 let counter = 0;
 let a = 0;
