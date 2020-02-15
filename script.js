@@ -1,4 +1,4 @@
-let seconds = 1500;
+let seconds = 5;
 const countdown = document.querySelector('#countdown')
 let counter = 0;
 let a = 0;
@@ -10,6 +10,7 @@ const pause = document.querySelector('#pause')
 const start = document.querySelector('#start')
 const reset = document.querySelector('#reset')
 const pomodorosCompleted = document.querySelector('#pomodorosCompleted')
+const beep = document.querySelector('#beep')
 
 
 pause.addEventListener('click', function() {
@@ -67,6 +68,7 @@ let timer = function() {
 
         if (seconds == 0) {
 
+            beep.play()
             counter++
             console.log('counter: ' + counter)
 
