@@ -5,11 +5,12 @@ let b = 0;
 let isPaused = true;
 let pomodoroTally = 0;
 let seconds = 1500;
+let initialCustomPomodoro = 25;
 
 
-let pomodoroTimer = document.querySelector('#timerContainer1').innerHTML;
-let shortBreakTimer = document.querySelector('#timerContainer2').value;
-let longBreakTimer = document.querySelector('#timerContainer3').value;
+let display1 = document.querySelector('.display1');
+let display2 = document.querySelector('.display2');
+let display3 = document.querySelector('.display3');
 
 
 // let seconds = Number(slider.value);
@@ -18,9 +19,23 @@ const start = document.querySelector('#start')
 const reset = document.querySelector('#reset')
 const pomodorosCompleted = document.querySelector('#pomodorosCompleted')
 const beep = document.querySelector('#beep')
+const arrowUp1 = document.querySelector('.arrow-up1')
+const arrowUp2 = document.querySelector('.arrow-up2')
+const arrowUp3 = document.querySelector('.arrow-up3')
 
 
-pomodoroSlider.addEventListener('input', function(e) {
+
+
+arrowUp1.addEventListener('click', function(e) {
+    initialCustomPomodoro++
+    display1.innerHTML = initialCustomPomodoro + ':00'
+
+
+});
+
+
+
+/*pomodoroSlider.addEventListener('input', function(e) {
 
     pomodoroTimer = Number(e.target.value);
 
@@ -39,6 +54,8 @@ longBreakSlider.addEventListener('input', function(e) {
 
 });
 
+*/
+
 
 
 pause.addEventListener('click', function() {
@@ -55,20 +72,20 @@ reset.addEventListener('click', function() {
 
     isPaused = true;
     if (counter % 2 == 0 && counter % 7 != 0) {
-        countdown.textContent = '25:00'
-        seconds = pomodoroTimer;
+        countdown.innerHTML = '25:00'
+        seconds = seconds;
 
     } else if (counter == 0) {
-        countdown.textContent = '25:00'
-        seconds = pomodoroTimer;
+        countdown.innerHTML = '25:00'
+        seconds = seconds;
 
     } else if (counter % 7 == 0 && counter != 0) {
-        countdown.textContent = '30:00'
+        countdown.innerHTML = '30:00'
         seconds = longBreakTimer;
 
 
     } else if (counter % 2 == 1 && counter & 7 != 0) {
-        countdown.textContent = '5:00'
+        countdown.innerHTML = '5:00'
         seconds = shortBreakTimer;
 
     }
@@ -79,7 +96,7 @@ reset.addEventListener('click', function() {
 let timer = function() {
 
     if (counter == 0) {
-        seconds = pomodoroTimer;
+        seconds = seconds;
     }
 
     if (isPaused === false) {
@@ -94,8 +111,8 @@ let timer = function() {
             }
 
             if (b <= 9) {
-                countdown.textContent = a + ':0' + b
-            } else { countdown.textContent = a + ':' + b }
+                countdown.innerHTML = a + ':0' + b
+            } else { countdown.innerHTML = a + ':' + b }
         }
 
         if (seconds == 0) {
@@ -112,12 +129,12 @@ let timer = function() {
             } else if (counter % 8 == 7) {
                 seconds = 1800
                 pomodoroTally++
-                pomodorosCompleted.textContent = 'Pomodoros Completed: ' + (pomodoroTally)
+                pomodorosCompleted.innerHTML = 'Pomodoros Completed: ' + (pomodoroTally)
 
             } else if (counter % 2 == 1 && counter % 8 != 7) {
                 seconds = 300
                 pomodoroTally++
-                pomodorosCompleted.textContent = 'Pomodoros Completed: ' + (pomodoroTally)
+                pomodorosCompleted.innerHTML = 'Pomodoros Completed: ' + (pomodoroTally)
 
 
             }

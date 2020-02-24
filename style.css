@@ -63,7 +63,23 @@ button:focus {
     padding-right: 100px;
 }
 
-.arrow-up {
+.arrow-up1 {
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid #f00;
+}
+
+.arrow-up2 {
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid #f00;
+}
+
+.arrow-up3 {
     width: 0;
     height: 0;
     border-left: 20px solid transparent;
@@ -105,7 +121,17 @@ button:focus {
     align-items: center;
 }
 
-.display {
+.display1 {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.display2 {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.display3 {
     padding-left: 10px;
     padding-right: 10px;
 }
