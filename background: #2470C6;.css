@@ -1,0 +1,24 @@
+background: #2470C6;
+background-image: -webkit-linear-gradient(top, #2470C6, #97D01E);
+background-image: -moz-linear-gradient(top, #2470C6, #97D01E);
+background-image: -ms-linear-gradient(top, #2470C6, #97D01E);
+background-image: -o-linear-gradient(top, #2470C6, #97D01E);
+background-image: linear-gradient(to bottom, #2470C6, #97D01E);
+-webkit-border-radius: 20px;
+-moz-border-radius: 20px;
+border-radius: 20px;
+color: rgb(255, 255, 255);
+font-family: Open Sans;
+font-size: 20px;
+font-weight: 100;
+padding: 20px;
+box-shadow: 1px 1px 20px 0px #000000;
+-webkit-box-shadow: 1px 1px 20px 0px #000000;
+-moz-box-shadow: 1px 1px 20px 0px #000000;
+text-shadow: 1px 1px 20px #000000;
+border: solid #337FED 1px;
+text-decoration: none;
+display: inline-block;
+cursor: pointer;
+text-align: center;
+<div class="slider-container"><input type="range" min="600" max="3000" value="1500" class="slider-color" id="pomodoroSlider"><input type="range" min="600" max="3000" class="slider-color" id="shortBreakSlider"><input type="range" min="600" max="3000" class="slider-color" id="longBreakSlider">

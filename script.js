@@ -1,16 +1,44 @@
-let seconds = 1500;
 const countdown = document.querySelector('#countdown')
 let counter = 0;
 let a = 0;
 let b = 0;
 let isPaused = true;
 let pomodoroTally = 0;
+let seconds = 1500;
 
+
+let pomodoroTimer = document.querySelector('#timerContainer1').innerHTML;
+let shortBreakTimer = document.querySelector('#timerContainer2').value;
+let longBreakTimer = document.querySelector('#timerContainer3').value;
+
+
+// let seconds = Number(slider.value);
 const pause = document.querySelector('#pause')
 const start = document.querySelector('#start')
 const reset = document.querySelector('#reset')
 const pomodorosCompleted = document.querySelector('#pomodorosCompleted')
 const beep = document.querySelector('#beep')
+
+
+pomodoroSlider.addEventListener('input', function(e) {
+
+    pomodoroTimer = Number(e.target.value);
+
+});
+
+
+shortBreakSlider.addEventListener('input', function(e) {
+
+    shortBreakTimer = Number(e.target.value);
+
+});
+
+longBreakSlider.addEventListener('input', function(e) {
+
+    longBreakTimer = Number(e.target.value);
+
+});
+
 
 
 pause.addEventListener('click', function() {
@@ -28,20 +56,20 @@ reset.addEventListener('click', function() {
     isPaused = true;
     if (counter % 2 == 0 && counter % 7 != 0) {
         countdown.textContent = '25:00'
-        seconds = 1500;
+        seconds = pomodoroTimer;
 
     } else if (counter == 0) {
         countdown.textContent = '25:00'
-        seconds = 1500;
+        seconds = pomodoroTimer;
 
     } else if (counter % 7 == 0 && counter != 0) {
         countdown.textContent = '30:00'
-        seconds = 1800;
+        seconds = longBreakTimer;
 
 
     } else if (counter % 2 == 1 && counter & 7 != 0) {
         countdown.textContent = '5:00'
-        seconds = 300;
+        seconds = shortBreakTimer;
 
     }
 
@@ -49,6 +77,10 @@ reset.addEventListener('click', function() {
 
 
 let timer = function() {
+
+    if (counter == 0) {
+        seconds = pomodoroTimer;
+    }
 
     if (isPaused === false) {
         if (seconds > 0) {
