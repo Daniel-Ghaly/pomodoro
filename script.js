@@ -39,6 +39,9 @@ const arrowDown3 = document.querySelector('.arrow-down3')
 arrowUp1.addEventListener('click', function(e) {
     initialCustomPomodoro++
     display1.innerHTML = initialCustomPomodoro + ':00'
+    if (hasStarted == false) {
+        countdown.innerHTML = initialCustomPomodoro + ':00'
+    }
 
     pomodoroSeconds = display1.innerHTML[0] + display1.innerHTML[1]
     pomodoroSeconds = Number(pomodoroSeconds)
@@ -48,6 +51,9 @@ arrowUp1.addEventListener('click', function(e) {
 arrowDown1.addEventListener('click', function(e) {
     initialCustomPomodoro--
     display1.innerHTML = initialCustomPomodoro + ':00'
+    if (hasStarted == false) {
+        countdown.innerHTML = initialCustomPomodoro + ':00'
+    }
     if (display1.innerHTML.length == 5) {
         pomodoroSeconds = display1.innerHTML[0] + display1.innerHTML[1]
         pomodoroSeconds = Number(pomodoroSeconds)
@@ -208,9 +214,6 @@ let timer = function() {
             beep.play()
             counter++
 
-            console.log(counter)
-
-
 
             if (counter % 2 == 0 && counter % 8 != 7) {
                 seconds = pomodoroSeconds
@@ -244,4 +247,4 @@ let timer = function() {
 
 
 
-let pomodoro = setInterval(timer, 1);
+let pomodoro = setInterval(timer, 1000);

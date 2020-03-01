@@ -4,7 +4,7 @@
 }
 
 body {
-    background-color: rgb(165, 104, 96, .5);
+    background-color: rgba(69, 90, 100);
     color: white;
     font-size: x-large;
     font-family: 'Baloo Tammudu', cursive;
@@ -68,7 +68,7 @@ button:focus {
     height: 0;
     border-left: 20px solid transparent;
     border-right: 20px solid transparent;
-    border-bottom: 20px solid #f00;
+    border-bottom: 20px solid lightgray;
 }
 
 .arrow-up2 {
@@ -76,7 +76,7 @@ button:focus {
     height: 0;
     border-left: 20px solid transparent;
     border-right: 20px solid transparent;
-    border-bottom: 20px solid #f00;
+    border-bottom: 20px solid lightgray
 }
 
 .arrow-up3 {
@@ -84,7 +84,7 @@ button:focus {
     height: 0;
     border-left: 20px solid transparent;
     border-right: 20px solid transparent;
-    border-bottom: 20px solid #f00;
+    border-bottom: 20px solid lightgray;
 }
 
 .arrow-down1 {
@@ -92,7 +92,7 @@ button:focus {
     height: 0;
     border-left: 20px solid transparent;
     border-right: 20px solid transparent;
-    border-top: 20px solid #f00;
+    border-top: 20px solid lightgray;
 }
 
 .arrow-down2 {
@@ -100,7 +100,7 @@ button:focus {
     height: 0;
     border-left: 20px solid transparent;
     border-right: 20px solid transparent;
-    border-top: 20px solid #f00;
+    border-top: 20px solid lightgray;
 }
 
 .arrow-down3 {
@@ -108,7 +108,7 @@ button:focus {
     height: 0;
     border-left: 20px solid transparent;
     border-right: 20px solid transparent;
-    border-top: 20px solid #f00;
+    border-top: 20px solid lightgray;
 }
 
 .container-left {
