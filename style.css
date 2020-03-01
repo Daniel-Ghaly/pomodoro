@@ -87,7 +87,23 @@ button:focus {
     border-bottom: 20px solid #f00;
 }
 
-.arrow-down {
+.arrow-down1 {
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid #f00;
+}
+
+.arrow-down2 {
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid #f00;
+}
+
+.arrow-down3 {
     width: 0;
     height: 0;
     border-left: 20px solid transparent;
